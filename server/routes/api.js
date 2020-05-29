@@ -7,48 +7,51 @@ const app = express();
 
 app.use(CORS);
 
-app.post('/diagnosis', async(req, res) => {
+app.post('/get_laws', async(req, res) => {
     let body = req.body;
-    let voice_signal = body.voice_signal;
-
-    const buffer = new Buffer.from(voice_signal);
-    fs.writeFile('sound.aac', buffer, (err) => {
-        if (err) throw err;
-        console.log('The file has been saved!');
-    });
-
-    result = '';
-    if (Math.random() > 0.5) {
-        result = 'Verdad';
-    } else {
-        result = 'Mentira';
-    }
+    let query = body.query;
+    let uid = body.uid;
 
     response = {
         ok: true,
-        result,
-        interval: Math.floor(Math.random() * (100)) + '%'
-    }
-
-    res.json(response);
-});
-
-app.post('/retroalimentation', async(req, res) => {
-    let body = req.body;
-
-    console.log(body);
-
-    response = {
-        ok: true,
-    }
+        query,
+        uid,
+        date: Date.now(),
+        info: 'todo bien',
+        laws: [{
+                title: 'Articulo 15',
+                description: 'Es ilegal robar, recapacita por favor',
+                info: 'ley sobre robos',
+                url: 'https://gerardoarceo.com',
+            },
+            {
+                title: 'Articulo 16',
+                description: 'Es ilegal robar, recapacita por favor',
+                info: 'ley sobre robos',
+                url: 'https://gerardoarceo.com',
+            },
+            {
+                title: 'Articulo 17',
+                description: 'Es ilegal robar, recapacita por favor',
+                info: 'ley sobre robos',
+                url: 'https://gerardoarceo.com',
+            },
+            {
+                title: 'Articulo 18',
+                description: 'Es ilegal robar, recapacita por favor',
+                info: 'ley sobre robos',
+                url: 'https://gerardoarceo.com',
+            }
+        ],
+    };
 
     res.json(response);
 });
 
 app.get('/', (req, res) => {
-    console.log('Lie to Api');
+    console.log('iLaw');
     data = {
-        app: 'Lie to Api',
+        app: 'iLaw',
         fecha: Date.now(),
         nombre: 'Gerardo Arceo',
         mensaje: 'Sé feliz :)'
