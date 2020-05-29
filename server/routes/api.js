@@ -1,15 +1,14 @@
 //REQUIREDS
 const express = require('express');
-const fs = require('fs');
 const { CORS } = require('../middlewares/access');
 
 const app = express();
 
 app.use(CORS);
 
-app.post('/get_laws', async(req, res) => {
+app.use('/get_laws', async(req, res) => {
     let body = req.body;
-    let query = body.query;
+    let query = body.query || 'SIN BÚSQUEDA';
     let uid = body.uid;
 
     response = {
