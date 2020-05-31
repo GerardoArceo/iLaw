@@ -1,0 +1,306 @@
+{
+    "docs": [{
+        "id": 1,
+        "name": "Constitución Política de la Ciudad de México",
+        "description": "La Constitución Política de los Estados Unidos Mexicanos de 1917 es la norma fundamental, establecida para regir jurídicamente al país",
+        "url": "http://www.infodf.org.mx/documentospdf/constitucion_cdmx/Constitucion_%20Politica_CDMX.pdf",
+        "titles": [{
+                "id": 1,
+                "name": "TÍTULO PRIMERO",
+                "description": "DISPOSICIONES GENERALES",
+                "chapters": [{
+                    "id": 1,
+                    "name": "CAPÍTULO I",
+                    "description": "DISPOSICIONES GENERALES",
+                    "articles": [{
+                            "id": 1,
+                            "name": "Artículo 1: De la Ciudad de México",
+                            "summary": "La CDMX es la capital de México, es libre y autónoma y su soberanía reside en el pueblo",
+                            "description": "",
+                            "tips": "",
+                            "page": 16,
+                            "keyWords": [
+                                "capital",
+                                "pueblo",
+                                "soberania"
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "name": "Artículo 2: De la naturaleza intercultural, pluriétnica, plurilingüe y pluricultural de la Ciudad",
+                            "summary": "La CDMX es intercultural, permite la migración nacional e internacional y es un espacio abierto para personas refugiadas",
+                            "description": "",
+                            "tips": "",
+                            "page": 17,
+                            "keyWords": [
+                                "intercultural",
+                                "migracion",
+                                "asilo",
+                                "refugio",
+                                "pluricultural",
+                                "indígenas",
+                                "extranjeros"
+                            ]
+                        },
+                        {
+                            "id": 3,
+                            "name": "Artículo 3: De los principios rectores",
+                            "summary": "La CDMX tiene como principios el respeto a los derechos humanos y garantizar el bienestar de sus habitantes, en armonía con la naturaleza",
+                            "description": "",
+                            "tips": "",
+                            "page": 18,
+                            "keyWords": [
+                                "derechos",
+                                "humanos",
+                                "principio",
+                                "bienestar",
+                                "naturaleza",
+                                "defensa",
+                                "respeto"
+                            ]
+                        }
+                    ]
+                }]
+            },
+            {
+                "id": 2,
+                "name": "TÍTULO SEGUNDO",
+                "description": "CARTA DE DERECHOS",
+                "chapters": [{
+                        "id": 1,
+                        "name": "CAPÍTULO I",
+                        "description": "DE LAS NORMAS Y GARANTÍAS DE LOS DERECHOS HUMANOS",
+                        "articles": [{
+                                "id": 4,
+                                "name": "Artículo 4: Principios de interpretación y aplicación de los derechos humanos",
+                                "summary": "Todas las autoridades están obligadas a garantizar los derechos humanos, la CDMX garantiza la igualdad entre todas las personas sin distinción por cualquiera de las condiciones de diversidad humana",
+                                "description": "",
+                                "tips": "",
+                                "page": 20,
+                                "keyWords": [
+                                    "autoridades",
+                                    "derechos",
+                                    "humanos",
+                                    "discriminacion",
+                                    "diversidad"
+                                ]
+                            },
+                            {
+                                "id": 5,
+                                "name": "Artículo 5: Ciudad garantista",
+                                "summary": "Las autoridades adoptarán las medidas que sean necesarias a fin de lograr la plena efectividad de los derechos reconocidos en esta Constitución, cualquiera podrá denunciar la violación a los derechos y todos tienen derecho a una reparación integral si fueron violados sus derechos",
+                                "description": "",
+                                "tips": "",
+                                "page": 22,
+                                "keyWords": [
+                                    "violacion",
+                                    "autoridades",
+                                    "medidas",
+                                    "reparacion",
+                                    "integral",
+                                    "indemnizacion",
+                                    "restitución",
+                                    "derechos",
+                                    "humanos",
+                                    "denunciar"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 2,
+                        "name": "CAPÍTULO II",
+                        "description": "DE LOS DERECHOS HUMANOS",
+                        "articles": [{
+                                "id": 6,
+                                "name": "Artículo 6: Ciudad de libertades y derechos",
+                                "summary": "Todos tienen derecho a la autodeterminación personal, a la integridad, a la seguridad jurídica, a la familia, a la sexualidad, a reproducirse, a defender los derechos, a la justicia y a la libertad de pensamiento",
+                                "description": "",
+                                "tips": "",
+                                "page": 24,
+                                "keyWords": [
+                                    "autodeterminación",
+                                    "derechos",
+                                    "humanos",
+                                    "integridad",
+                                    "seguridad",
+                                    "familia",
+                                    "sexualidad",
+                                    "defender",
+                                    "justicia",
+                                    "libertad",
+                                    "pensamiento",
+                                    "reproducirse"
+                                ]
+                            },
+                            {
+                                "id": 7,
+                                "name": "Artículo 7: Ciudad democrática",
+                                "summary": "Todos tienen derecho a la buena administración pública, a reunirse pacíficamente, a expresarse, a la información, a la privacidad y a un gobierno democrático",
+                                "description": "",
+                                "tips": "",
+                                "page": 26,
+                                "keyWords": [
+                                    "administración",
+                                    "publica",
+                                    "reunirse",
+                                    "expresarse",
+                                    "comunicacion",
+                                    "informacion",
+                                    "privacidad",
+                                    "derecho",
+                                    "gobierno"
+                                ]
+                            },
+                            {
+                                "id": 8,
+                                "name": "Artículo 8: Ciudad educadora y del conocimiento",
+                                "summary": "Todos tienen derecho a la educación y al deporte, en la CDMX el acceso al desarrollo científico y tecnológico es un derecho universal por lo que el arte y la ciencia son libres y queda prohibida toda forma de censura",
+                                "description": "",
+                                "tips": "",
+                                "page": 29,
+                                "keyWords": [
+                                    "educacion",
+                                    "deporte",
+                                    "censura",
+                                    "ciencia",
+                                    "tecnologia",
+                                    "arte",
+                                    "libertad",
+                                    "desarrollo",
+                                    "derecho"
+                                ]
+                            },
+                            {
+                                "id": 9,
+                                "name": "Artículo 9: Ciudad solidaria",
+                                "summary": "Todos tienen derecho a la vida digna, al cuidado, a la alimentación y nutrición, a la salud, a la vivienda, al agua y a su saneamiento",
+                                "description": "",
+                                "tips": "",
+                                "page": 34,
+                                "keyWords": [
+                                    "vida",
+                                    "cuidado",
+                                    "alimentacion",
+                                    "nutricion",
+                                    "salud",
+                                    "vivienda",
+                                    "agua",
+                                    "saneamiento",
+                                    "derecho"
+                                ]
+                            },
+                            {
+                                "id": 10,
+                                "name": "Artículo 10: Ciudad productiva",
+                                "summary": "Todos tienen derecho al desarrollo sustentable y al trabajo, la CDMX impulsará el emprendimiento e inversiones además de ayudar a los campesinos",
+                                "description": "",
+                                "tips": "",
+                                "page": 37,
+                                "keyWords": [
+                                    "desarrollo",
+                                    "sustentable",
+                                    "trabajo",
+                                    "emprendimiento",
+                                    "inversion",
+                                    "campo",
+                                    "campesino",
+                                    "sindicato",
+                                    "derecho"
+                                ]
+                            },
+                            {
+                                "id": 11,
+                                "name": "Artículo 11: Ciudad incluyente",
+                                "summary": "En la CDMX hay grupos de atención prioritaria, se adoptan medidas para eliminar las barreras que impidan la realización plena de los derechos, promueve la paridad de género, busca erradicar cualquier tipo de discriminación, se reconoce en igualdad de derechos a las familias formadas por parejas LGBTTTI, los migrantes no serán criminalizados, las personas privadas de libertad tendrán un trato humano y protegeran los derechos de absolutamente todos, sin excepción",
+                                "description": "",
+                                "tips": "",
+                                "page": 42,
+                                "keyWords": [
+                                    "derechos",
+                                    "mujeres",
+                                    "niños",
+                                    "ancianos",
+                                    "mayores",
+                                    "discapacidad",
+                                    "LGBTTTI",
+                                    "lesbiana",
+                                    "gay",
+                                    "bisexual",
+                                    "transgénero",
+                                    "migrantes",
+                                    "presos",
+                                    "libertad",
+                                    "victima",
+                                    "vagabundo",
+                                    "calle",
+                                    "asistencia",
+                                    "afrodescendiente",
+                                    "negro",
+                                    "indigena",
+                                    "religion",
+                                    "humano",
+                                    "derecho"
+                                ]
+                            },
+                            {
+                                "id": 12,
+                                "name": "Artículo 12: Derecho a la Ciudad",
+                                "summary": "Todos tienen derecho a el uso y el usufructo pleno y equitativo de la ciudad",
+                                "description": "",
+                                "tips": "",
+                                "page": 46,
+                                "keyWords": [
+                                    "ciudad",
+                                    "uso",
+                                    "derecho"
+                                ]
+                            },
+                            {
+                                "id": 13,
+                                "name": "Artículo 13: Ciudad habitable",
+                                "summary": "Todos tienen derecho a un medio ambiente sano, a la vía pública, al espacio público, a la movilidad y al tiempo libre. Los animales deben recibir un trato digno, el maltrato animal está prohibido",
+                                "description": "",
+                                "tips": "",
+                                "page": 47,
+                                "keyWords": [
+                                    "ciudad",
+                                    "medio",
+                                    "ambiente",
+                                    "publico",
+                                    "via",
+                                    "calle",
+                                    "espacio",
+                                    "tiempo",
+                                    "libre",
+                                    "animales",
+                                    "maltrato",
+                                    "derecho"
+                                ]
+                            },
+                            {
+                                "id": 14,
+                                "name": "Artículo 14: Ciudad segura",
+                                "summary": "Todos tienen derecho a la seguridad urbana, la protección civil, la seguridad ciudadan y a la prevención de la violencia y del delito",
+                                "description": "",
+                                "tips": "",
+                                "page": 49,
+                                "keyWords": [
+                                    "seguridad",
+                                    "urbana",
+                                    "proteccion",
+                                    "civil",
+                                    "prevencion",
+                                    "delito",
+                                    "violencia",
+                                    "amenaza",
+                                    "derecho"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }]
+}

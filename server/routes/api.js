@@ -1,6 +1,7 @@
 //REQUIREDS
 const express = require('express');
 const { CORS } = require('../middlewares/access');
+const fs = require('fs');
 
 const app = express();
 
@@ -11,44 +12,44 @@ app.use('/get_laws', async(req, res) => {
     let query = body.query || 'SIN BÚSQUEDA';
     let uid = body.uid;
 
+    let rawdata = fs.readFileSync('server/docs/laws.json');
+    let docs = JSON.parse(rawdata).docs;
+
+    ok = true;
+    info = 'Todo bien :)';
+
+    keyWords = [
+        'Hola',
+        'Mundo'
+    ];
+
+    laws = [];
+
+    docs.forEach(doc => {
+        doc.titles.forEach(title => {
+            title.chapters.forEach(chapter => {
+                chapter.articles.forEach(article => {
+                    article.url = doc.url + '#page=' + article.page;
+                    laws.push(article);
+                });
+            });
+        });
+    });
+
     response = {
-        ok: true,
+        ok,
         query,
         uid,
+        info,
         date: Date.now(),
-        info: 'todo bien',
-        laws: [{
-                title: 'Articulo 15',
-                description: 'Es ilegal robar, recapacita por favor',
-                info: 'ley sobre robos',
-                url: 'https://gerardoarceo.com',
-            },
-            {
-                title: 'Articulo 16',
-                description: 'Es ilegal robar, recapacita por favor',
-                info: 'ley sobre robos',
-                url: 'https://gerardoarceo.com',
-            },
-            {
-                title: 'Articulo 17',
-                description: 'Es ilegal robar, recapacita por favor',
-                info: 'ley sobre robos',
-                url: 'https://gerardoarceo.com',
-            },
-            {
-                title: 'Articulo 18',
-                description: 'Es ilegal robar, recapacita por favor',
-                info: 'ley sobre robos',
-                url: 'https://gerardoarceo.com',
-            }
-        ],
+        keyWords,
+        laws,
     };
 
     res.json(response);
 });
 
 app.get('/', (req, res) => {
-    console.log('iLaw');
     data = {
         app: 'iLaw',
         fecha: Date.now(),
