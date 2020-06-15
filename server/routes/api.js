@@ -7,21 +7,49 @@ const app = express();
 
 app.use(CORS);
 
+function sortByKey(array, key) {
+    return array.sort(function(a, b) {
+        var x = a[key];
+        var y = b[key];
+        return ((x < y) ? 1 : ((x > y) ? -1 : 0));
+    });
+}
+
+app.use('/get_doc', async(req, res) => {
+    let idDoc = req.query.id;
+    if (!idDoc)
+        idDoc = 0;
+    else
+        idDoc--;
+    let rawdata = fs.readFileSync('server/docs/laws.json');
+    let doc = JSON.parse(rawdata)[idDoc];
+    res.json(doc);
+});
+
+
+app.post('/update_doc', async(req, res) => {
+    let idDoc = parseInt(req.body.idDoc) - 1;
+    let doc = req.body.doc;
+    let rawdata = fs.readFileSync('server/docs/laws.json');
+    let docs = JSON.parse(rawdata);
+    docs[idDoc] = doc;
+    fs.writeFileSync('server/docs/laws.json', JSON.stringify(docs), (err) => {
+        if (err) throw err;
+    });
+    res.json({ ok: true });
+});
+
 app.use('/get_laws', async(req, res) => {
     let body = req.body;
-    let query = body.query || 'SIN BÚSQUEDA';
+    let query = body.query || req.query.query || '';
     let uid = body.uid;
 
     let rawdata = fs.readFileSync('server/docs/laws.json');
-    let docs = JSON.parse(rawdata).docs;
+    let docs = JSON.parse(rawdata);
 
     ok = true;
-    info = 'Todo bien :)';
 
-    keyWords = [
-        'Hola',
-        'Mundo'
-    ];
+    keyWords = query.split(" ");
 
     laws = [];
 
@@ -30,35 +58,39 @@ app.use('/get_laws', async(req, res) => {
             title.chapters.forEach(chapter => {
                 chapter.articles.forEach(article => {
                     article.url = doc.url + '#page=' + article.page;
+                    article.compatibility = 0;
                     laws.push(article);
                 });
             });
         });
     });
 
+    keyWords.forEach(keyWord => {
+        laws.forEach(law => {
+            if (law.keyWords.includes(keyWord)) {
+                law.compatibility++;
+            }
+        });
+    });
+
+    searchedLaws = [];
+    laws = sortByKey(laws, "compatibility");
+    laws.forEach(law => {
+        if (law.compatibility > 0) {
+            searchedLaws.push({ name: law.name, summary: law.summary, description: law.description, tips: law.tips, url: law.url });
+        }
+    });
+
     response = {
         ok,
         query,
         uid,
-        info,
         date: Date.now(),
         keyWords,
-        laws,
+        laws: searchedLaws,
     };
 
     res.json(response);
-});
-
-app.get('/', (req, res) => {
-    data = {
-        app: 'iLaw',
-        fecha: Date.now(),
-        nombre: 'Gerardo Arceo',
-        mensaje: 'Sé feliz :)'
-    };
-    res.json({
-        data
-    });
 });
 
 module.exports = app;
