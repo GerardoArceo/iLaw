@@ -16,7 +16,7 @@ function sortByKey(array, key) {
 }
 
 app.use('/get_doc', async(req, res) => {
-    let idDoc = req.query.id;
+    let idDoc = req.query.idDoc;
     if (!idDoc)
         idDoc = 0;
     else
