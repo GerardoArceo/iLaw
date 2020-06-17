@@ -32,7 +32,7 @@ app.post('/update_doc', async(req, res) => {
     let doc = req.body.doc;
     let rawdata = fs.readFileSync('server/docs/laws.json');
     let docs = JSON.parse(rawdata);
-    docs[idDoc] = doc;
+    docs[idDoc] = JSON.parse(doc);
     fs.writeFileSync('server/docs/laws.json', JSON.stringify(docs), (err) => {
         if (err) throw err;
     });
