@@ -1,6 +1,7 @@
 const express = require('express');
 const { CORS } = require('../middlewares/access');
 const fs = require('fs');
+const axios = require('axios');
 
 const app = express();
 
@@ -14,6 +15,20 @@ function sortByKey(array, key) {
     });
 }
 
+const getKeyWords = async(query) => {
+    const headers = {
+        'Content-Type': 'application/json',
+        'Authorization': 'Token 5a889377e0b8cea16790a8d0c3a167d07c1767a6'
+    };
+
+    const data = {
+        "data": [query]
+    };
+
+    const keyWords = await axios.post('https://api.monkeylearn.com/v3/extractors/ex_YCya9nrn/extract/', data, { headers: headers });
+    return keyWords.data[0].extractions;
+};
+
 app.use('/get_laws', async(req, res) => {
     let body = req.body;
     let query = body.query || req.query.query || '';
@@ -24,7 +39,7 @@ app.use('/get_laws', async(req, res) => {
 
     ok = true;
 
-    keyWords = query.split(" ");
+    const keyWords = await getKeyWords(query);
 
     laws = [];
 
@@ -42,8 +57,8 @@ app.use('/get_laws', async(req, res) => {
 
     keyWords.forEach(keyWord => {
         laws.forEach(law => {
-            if (law.keyWords.includes(keyWord)) {
-                law.compatibility++;
+            if (law.keyWords.includes(keyWord.parsed_value)) {
+                law.compatibility += keyWord.relevance;
             }
         });
     });
